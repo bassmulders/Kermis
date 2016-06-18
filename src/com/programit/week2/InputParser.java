@@ -9,7 +9,7 @@ class InputParser {
     private int argument;
 
     int parse(String userInput) {
-        int result = 0;
+        int result = 0; // Commentaar
         String[] cmdLine = userInput.split(":");
         for (int i = 0; i < cmdLine.length; i++) { cmdLine[i] = cmdLine[i].trim(); }
         switch (cmdLine[0]) {
@@ -66,7 +66,7 @@ class InputParser {
         catch (Exception e) {
 
         }
-            return result;
+        return result;
     }
 
     int getParseResult() {
