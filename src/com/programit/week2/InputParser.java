@@ -61,10 +61,14 @@ class InputParser {
         }
         parseResult = result;
         try {
-            argument = Integer.parseInt(cmdLine[1]);
+            if (cmdLine.length > 1) {
+                argument = Integer.parseInt(cmdLine[1]);
+            } else {
+                argument = 1; // default is 1 ticket or order
+            }
         }
-        catch (Exception e) {
-
+        catch (NumberFormatException e) {
+            argument = 1; // default is 1 ticket or order
         }
         return result;
     }
@@ -72,4 +76,9 @@ class InputParser {
     int getParseResult() {
         return parseResult;
     }
+
+    int getArgument() {
+        return argument;
+    }
 }
+

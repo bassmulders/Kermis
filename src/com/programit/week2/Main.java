@@ -6,5 +6,6 @@ public class Main {
         // write your code here
         Fair fair = new Fair("Park Hilaria");
         fair.run();
+        System.out.println(fair.getName() + " is gesloten.");
     }
 }

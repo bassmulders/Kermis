@@ -3,9 +3,9 @@ package com.programit.week2;
 /**
  * Created by Bas on 18/06/16.
  */
-class Granola extends FoodStall {
+class Candy extends FoodStall {
     void eat(int nrOfOrders) {
-        System.out.println("Muesli met yoghurt.");
+        System.out.println("Ik heb wel zin in zo'n ouderwetse kaneelstok.");
         updateCounters(nrOfOrders);
     }
 }
