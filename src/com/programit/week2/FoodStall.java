@@ -4,11 +4,11 @@ package com.programit.week2;
  * Created by Bas on 13-6-2016.
  */
 class FoodStall extends Attraction {
-    private static double foodStallsTurnover = 0.0; // Keep track of the total food turnover.
+    private static int foodStallsTurnover = 0; // Keep track of the total food turnover.
     //private static int foodStallCounter = 0; // Count the number of FoodStall objects
     private static int totalConsumptionCounter = 0; // Count the total number of consumptions sold.
     private int consumptionCounter = 0; // Count the number of consumptions sold at this stall
-    private double turnover = 0.0; // Keep track of the turnover for this FoodStall
+    private int turnover = 0; // Keep track of the turnover for this FoodStall
 
     FoodStall() {
         this.setType(AttractionType.FOOD);
@@ -21,7 +21,7 @@ class FoodStall extends Attraction {
     //    //foodStallCounter++;
     //}
 
-    static double getFoodStallsTurnover() {
+    static int getFoodStallsTurnover() {
         return foodStallsTurnover;
     }
 
@@ -29,7 +29,7 @@ class FoodStall extends Attraction {
         return totalConsumptionCounter;
     }
 
-    double getTurnover() {
+    int getTurnover() {
         return turnover;
     }
 

@@ -9,10 +9,10 @@ abstract class Attraction {
 
     private String name;
     private AttractionType type;
-    private double price;
+    private int price; // store price in cents, so whole number
     //private Person owner = new Person();
     //private ArrayList<Person> employees = new ArrayList<Person>();
-    private static double totalTurnover = 0.0;
+    private static int totalTurnover = 0;
     private static int attractionCounter = 0;
     private int ID;
 
@@ -20,11 +20,11 @@ abstract class Attraction {
         attractionCounter = getAttractionCounter() + 1;
     }
 
-    static double getTotalTurnover() {
+    static int getTotalTurnover() {
         return totalTurnover;
     }
 
-    static void addTurnover(double turnover) {
+    static void addTurnover(int turnover) {
         totalTurnover += turnover;
     }
 
@@ -56,11 +56,11 @@ abstract class Attraction {
         this.ID = ID;
     }
 
-    double getPrice() {
+    int getPrice() {
         return price;
     }
 
-    void setPrice(double price) {
+    void setPrice(int price) {
         this.price = price;
     }
 }

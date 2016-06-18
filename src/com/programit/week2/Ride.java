@@ -4,26 +4,18 @@ package com.programit.week2;
  * Created by Bas on 13-6-2016.
  */
 class Ride extends Attraction {
-    private static double ridesTurnover = 0.0; // Keep track of the total turnover of all Ride objects combined
+    private static int ridesTurnover = 0; // Keep track of the total turnover of all Ride objects combined
     //private static int rideCounter = 0; // Count the number of Ride objects
     private static int totalTicketCounter = 0; // Count the total number of tickets sold.
     private int ticketCounter = 0; // Count the number of tickets sold for this Ride
-    private double turnover = 0.0; // Keep track of the turnover for this Ride
+    private int turnover = 0; // Keep track of the turnover for this instance of Ride
 
 
     Ride() {
         this.setType(AttractionType.NON_FOOD);
     }
 
-    //Ride (String name, int ID, double ticketPrice) {
-    //    this.setType(AttractionType.NON_FOOD);
-    //    this.setID(ID);
-    //    this.setName(name);
-    //    this.setPrice(ticketPrice);
-    //    //rideCounter++;
-    //}
-
-    static double getRidesTurnover() {
+    static int getRidesTurnover() {
         return ridesTurnover;
     }
 
@@ -35,7 +27,7 @@ class Ride extends Attraction {
         return ticketCounter;
     }
 
-    double getTurnover() {
+    int getTurnover() {
         return turnover;
     }
 
